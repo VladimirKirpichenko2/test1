@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.lang.reflect.Array;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +18,7 @@ public class TestBase {
 
     public void openEnv() {
         driver = new ChromeDriver();
-        driver.get(Config.ENV_LINK);
+        driver.get(Config.ENV_LINK_GT1);
         driver.manage().window().maximize();
     }
 
