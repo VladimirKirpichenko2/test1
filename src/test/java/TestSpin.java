@@ -8,7 +8,8 @@ import org.junit.Test;
  */
 public class TestSpin extends TestBase {
 
-    public static String[] LANGUAGES = {"bg", "br", "cn", "cs", "da", "de", "el", "en", "es", "et", "fi", "fr", "hr", "hu", "it", "nl", "no", "pl", "pt", "ro", "ru", "sk", "sv", "tr"};
+    //public static String[] LANGUAGES = {"bg", "br", "cn", "cs", "da", "de", "el", "en", "es", "et", "fi", "fr", "hr", "hu", "it", "nl", "no", "pl", "pt", "ro", "ru", "sk", "sv", "tr"};
+    public static String[] LANGUAGES = {"bg", "br"};
 
     @Before
     public void setUp() {
