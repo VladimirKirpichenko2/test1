@@ -18,7 +18,7 @@ public class TestBase {
 
     public void openEnv() {
         driver = new ChromeDriver();
-        driver.get(Config.ENV_LINK_GT1);
+        driver.get(System.getenv("TESTENV"));
         driver.manage().window().maximize();
     }
 

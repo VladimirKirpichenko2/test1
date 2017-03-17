@@ -3,13 +3,17 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Properties;
+
 /**
  * Created by vladimir.kirpichenko on 22.02.2017.
  */
 public class TestSpin extends TestBase {
 
     //public static String[] LANGUAGES = {"bg", "br", "cn", "cs", "da", "de", "el", "en", "es", "et", "fi", "fr", "hr", "hu", "it", "nl", "no", "pl", "pt", "ro", "ru", "sk", "sv", "tr"};
-    public static String[] LANGUAGES = {"bg", "br"};
+   // public static String[] LANGUAGES = {"bg", "br"};
+
+    public static String[] LANGUAGES = System.getenv("LANG").split(",");
 
     @Before
     public void setUp() {
@@ -30,7 +34,8 @@ public class TestSpin extends TestBase {
         for (String lang : LANGUAGES) {
             loginTesterPage("ivan1");
             chooseLang(lang);
-            launchGame("pyramid_not_mobile");
+            launchGame(System.getenv("GAME"));
+            //launchGame("pyramid_not_mobile");
             waitGameLoaded();
             closeFSS();
             float cashBefore = getCash();
